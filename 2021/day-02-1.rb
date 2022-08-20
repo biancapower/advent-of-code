@@ -1,7 +1,6 @@
 file = File.open("day-02-input.txt")
-file_data = file.readlines.map(&:chomp) 							# gets each line and discards \n
-													.map{|arr| arr.split(' ')} 	# split direction from amount
-													.map{|a| [a[0], a[1].to_i]}	# convert amount to int
+file_data = file.readlines.map{ |line| line.chomp.split(' ') }
+													.map{|a| [a[0], a[1].to_i]}
 
 horizontal_position = 0
 depth = 0
