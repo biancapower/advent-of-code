@@ -21,6 +21,7 @@ end
 =end
 
 items.map! do |i|
+  # use char.sum to get ascii value
   s = i[0].sum
   s > 96 ? s - 96 : s - 38
 end
